@@ -20,7 +20,7 @@ public class BaseTest {
 		driver.quit();
 	}
 
-	public HomePage openMercuryHomePage() {
+	public HomePage mercuryHomePage() {
 		this.driver.get(URL);
 		return new HomePage(this.driver);
 	}

@@ -70,7 +70,7 @@ public class RegisterPage {
 		submitButton.click();
 	}
 	
-	public Boolean validateTitle() {
+	public Boolean pageTitle() {
 		return driver.getTitle().contains(PAGETITLE);
 	}
 

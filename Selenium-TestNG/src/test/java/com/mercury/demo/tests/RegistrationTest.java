@@ -12,14 +12,14 @@ public class RegistrationTest extends BaseTest {
 	MailingInformation mailingInformation = new MailingInformation(new Address("Address"), new City("Newcastle"),
 			new State("New South Walse"), new PostalCode("2305"), new Country("AUSTRALIA"));
 	UserInformation userInformation = new UserInformation(new UserName("Cerosh"), new Password("password"));
-	RegisterationDetails registerationDetails = new RegisterationDetails(contactInformation, mailingInformation,
+	RegisterationDetails withRegisterationDetails = new RegisterationDetails(contactInformation, mailingInformation,
 			userInformation);
 
 	@Test
 	public void registerAUser() {
-		HomePage navigating = openMercuryHomePage();
-		RegisterPage registerPage = navigating.toRegisterPage();
-		registerPage.registerAccount(registerationDetails);
-		Assert.assertTrue(registerPage.validateTitle());
+		HomePage navigate = mercuryHomePage();
+		RegisterPage registerPage = navigate.toRegisterPage();
+		registerPage.registerAccount(withRegisterationDetails);
+		Assert.assertTrue(registerPage.pageTitle());
 	}
 }
