@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4538" started-at="2018-06-14T10:25:21Z" finished-at="2018-06-14T10:25:25Z">
+  <suite name="Default suite" duration-ms="5913" started-at="2018-06-17T05:40:33Z" finished-at="2018-06-17T05:40:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4538" started-at="2018-06-14T10:25:21Z" finished-at="2018-06-14T10:25:25Z">
+    <test name="Default test" duration-ms="5913" started-at="2018-06-17T05:40:33Z" finished-at="2018-06-17T05:40:39Z">
       <class name="com.mercury.demo.tests.RegistrationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="setUp" is-config="true" duration-ms="1332" started-at="2018-06-14T20:25:21Z" finished-at="2018-06-14T20:25:22Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="setUp" is-config="true" duration-ms="1170" started-at="2018-06-17T15:40:33Z" finished-at="2018-06-17T15:40:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registerAUser()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="registerAUser" duration-ms="3099" started-at="2018-06-14T20:25:22Z" finished-at="2018-06-14T20:25:25Z">
+        <test-method status="PASS" signature="registerAUser()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="registerAUser" duration-ms="4644" started-at="2018-06-17T15:40:34Z" finished-at="2018-06-17T15:40:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerAUser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="tearDown" is-config="true" duration-ms="90" started-at="2018-06-14T20:25:25Z" finished-at="2018-06-14T20:25:25Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="tearDown" is-config="true" duration-ms="85" started-at="2018-06-17T15:40:39Z" finished-at="2018-06-17T15:40:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

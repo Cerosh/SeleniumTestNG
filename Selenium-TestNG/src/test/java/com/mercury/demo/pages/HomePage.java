@@ -1,7 +1,6 @@
 package com.mercury.demo.pages;
 
 import org.openqa.selenium.By;
-
 import com.mercury.demo.utils.Driver.BrowserDriver;
 import com.mercury.demo.utils.Elements.Link;
 
@@ -16,7 +15,7 @@ public class HomePage {
 			throw new RuntimeException("home page is not displayed");
 	}
 
-	public RegisterPage ToRegisterPage() {
+	public RegisterPage toRegisterPage() {
 		Link registrationLink = new Link(driver.findElement(REGISTER_URL));
 		registrationLink.click();
 		return new RegisterPage(this.driver);
