@@ -2,6 +2,7 @@ package com.mercury.demo.pages;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 
@@ -27,7 +28,7 @@ public class RegisterPage {
 	private final By PASSWORD = By.name("password");
 	private final By CONFIRMPASSWORD = By.name("confirmPassword");
 	private final By SUBMIT = By.name("register");
-	private final String PAGETITLE="Register: Mercury Tours";
+	private final String PAGETITLE = "Register: Mercury Tours";
 
 	public RegisterPage(BrowserDriver driver) {
 		this.driver = driver;
@@ -41,7 +42,7 @@ public class RegisterPage {
 		List<String> mailingInformation = Arrays
 				.asList(registerationDetails.getMailingInformation().toString().split(","));
 		List<String> userInformation = Arrays.asList(registerationDetails.getUserInformation().toString().split(","));
-		
+
 		TextBox firstName = new TextBox(driver.findElement(FIRSTNAME));
 		firstName.type(contactInformation.get(0));
 		TextBox lastName = new TextBox(driver.findElement(LASTNAME));
@@ -69,9 +70,39 @@ public class RegisterPage {
 		Button submitButton = new Button(driver.findElement(SUBMIT));
 		submitButton.click();
 	}
-	
+
 	public Boolean pageTitle() {
 		return driver.getTitle().contains(PAGETITLE);
+	}
+
+	public void registerAccountDetails(Map<String, String> withHashMap) {
+		TextBox firstName = new TextBox(driver.findElement(FIRSTNAME));
+		firstName.type(withHashMap.get("FName"));
+		TextBox lastName = new TextBox(driver.findElement(LASTNAME));
+		lastName.type(withHashMap.get("LName"));
+		TextBox phone = new TextBox(driver.findElement(PHONE));
+		phone.type(withHashMap.get("Phone"));
+		TextBox email = new TextBox(driver.findElement(EMAIL));
+		email.type(withHashMap.get("Email"));
+		TextBox address = new TextBox(driver.findElement(ADDRESS));
+		address.type(withHashMap.get("Address"));
+		TextBox city = new TextBox(driver.findElement(CITY));
+		city.type(withHashMap.get("City"));
+		TextBox state = new TextBox(driver.findElement(STATE));
+		state.type(withHashMap.get("State"));
+		TextBox postalCode = new TextBox(driver.findElement(POSTALCODE));
+		postalCode.type(withHashMap.get("Postal Code"));
+		ListBox country = new ListBox(driver.findElement(COUNTRY));
+		country.selectByVisibleText(withHashMap.get("Country"));
+		TextBox username = new TextBox(driver.findElement(USERNAME));
+		username.type(withHashMap.get("UserName"));
+		TextBox password = new TextBox(driver.findElement(PASSWORD));
+		password.type(withHashMap.get("Password"));
+		TextBox confirmPassword = new TextBox(driver.findElement(CONFIRMPASSWORD));
+		confirmPassword.type(withHashMap.get("Password"));
+		Button submitButton = new Button(driver.findElement(SUBMIT));
+		submitButton.click();
+
 	}
 
 }
