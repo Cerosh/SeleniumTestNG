@@ -3,9 +3,7 @@ package com.mercury.demo.pages;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-
 import org.openqa.selenium.By;
-
 import com.mercury.demo.tests.RegisterationDetails;
 import com.mercury.demo.utils.Driver.BrowserDriver;
 import com.mercury.demo.utils.Elements.Button;
@@ -100,6 +98,36 @@ public class RegisterPage {
 		password.type(withHashMap.get("Password"));
 		TextBox confirmPassword = new TextBox(driver.findElement(CONFIRMPASSWORD));
 		confirmPassword.type(withHashMap.get("Password"));
+		Button submitButton = new Button(driver.findElement(SUBMIT));
+		submitButton.click();
+
+	}
+
+	public void registerAccountDetailsWith(Map<String, String> arrayObjecthashWithMap) {
+		TextBox firstName = new TextBox(driver.findElement(FIRSTNAME));
+		firstName.type(arrayObjecthashWithMap.get("FName"));
+		TextBox lastName = new TextBox(driver.findElement(LASTNAME));
+		lastName.type(arrayObjecthashWithMap.get("LName"));
+		TextBox phone = new TextBox(driver.findElement(PHONE));
+		phone.type(arrayObjecthashWithMap.get("Phone"));
+		TextBox email = new TextBox(driver.findElement(EMAIL));
+		email.type(arrayObjecthashWithMap.get("Email"));
+		TextBox address = new TextBox(driver.findElement(ADDRESS));
+		address.type(arrayObjecthashWithMap.get("Address"));
+		TextBox city = new TextBox(driver.findElement(CITY));
+		city.type(arrayObjecthashWithMap.get("City"));
+		TextBox state = new TextBox(driver.findElement(STATE));
+		state.type(arrayObjecthashWithMap.get("State"));
+		TextBox postalCode = new TextBox(driver.findElement(POSTALCODE));
+		postalCode.type(arrayObjecthashWithMap.get("Postal_Code"));
+		ListBox country = new ListBox(driver.findElement(COUNTRY));
+		country.selectByVisibleText(arrayObjecthashWithMap.get("Country"));
+		TextBox username = new TextBox(driver.findElement(USERNAME));
+		username.type(arrayObjecthashWithMap.get("UserName"));
+		TextBox password = new TextBox(driver.findElement(PASSWORD));
+		password.type(arrayObjecthashWithMap.get("Password"));
+		TextBox confirmPassword = new TextBox(driver.findElement(CONFIRMPASSWORD));
+		confirmPassword.type(arrayObjecthashWithMap.get("Password"));
 		Button submitButton = new Button(driver.findElement(SUBMIT));
 		submitButton.click();
 

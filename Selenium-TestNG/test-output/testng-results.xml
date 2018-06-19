@@ -1,33 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12636" started-at="2018-06-18T10:20:42Z" finished-at="2018-06-18T10:20:54Z">
+  <suite name="Default suite" duration-ms="276060" started-at="2018-06-19T11:27:58Z" finished-at="2018-06-19T11:32:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12636" started-at="2018-06-18T10:20:42Z" finished-at="2018-06-18T10:20:54Z">
+    <test name="Default test" duration-ms="276060" started-at="2018-06-19T11:27:58Z" finished-at="2018-06-19T11:32:34Z">
       <class name="com.mercury.demo.tests.RegistrationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="setUp" is-config="true" duration-ms="1514" started-at="2018-06-18T20:20:42Z" finished-at="2018-06-18T20:20:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="1130" started-at="2018-06-19T21:27:58Z" finished-at="2018-06-19T21:27:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registerAUser()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="registerAUser" duration-ms="5059" started-at="2018-06-18T20:20:43Z" finished-at="2018-06-18T20:20:48Z">
+        <test-method status="PASS" signature="registerAUser()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="registerAUser" duration-ms="39311" started-at="2018-06-19T21:27:59Z" finished-at="2018-06-19T21:28:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerAUser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="tearDown" is-config="true" duration-ms="82" started-at="2018-06-18T20:20:48Z" finished-at="2018-06-18T20:20:48Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="84" started-at="2018-06-19T21:28:38Z" finished-at="2018-06-19T21:28:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="setUp" is-config="true" duration-ms="557" started-at="2018-06-18T20:20:48Z" finished-at="2018-06-18T20:20:49Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="620" started-at="2018-06-19T21:28:38Z" finished-at="2018-06-19T21:28:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registerAUserwithHashMap()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="registerAUserwithHashMap" duration-ms="5324" started-at="2018-06-18T20:20:49Z" finished-at="2018-06-18T20:20:54Z">
+        <test-method status="PASS" signature="registerAUserwithHashMap()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="registerAUserwithHashMap" duration-ms="78751" started-at="2018-06-19T21:28:39Z" finished-at="2018-06-19T21:29:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerAUserwithHashMap -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@675d3402]" name="tearDown" is-config="true" duration-ms="77" started-at="2018-06-18T20:20:54Z" finished-at="2018-06-18T20:20:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="90" started-at="2018-06-19T21:29:57Z" finished-at="2018-06-19T21:29:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="662" started-at="2018-06-19T21:29:58Z" finished-at="2018-06-19T21:29:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerWithArrayObject(java.util.Map)[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="registerWithArrayObject" duration-ms="94286" started-at="2018-06-19T21:29:59Z" data-provider="RegisterUser" finished-at="2018-06-19T21:31:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=rohan@gmail.com, UserName=Rohan, LName=C Jacob, Address=Panyil Veedu, Phone=12345.0, State=Kerala, Postal_Code=691003.0, Country=INDIA, City=Kollam, FName=Rohan, Password=pass}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithArrayObject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="82" started-at="2018-06-19T21:31:33Z" finished-at="2018-06-19T21:31:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="615" started-at="2018-06-19T21:31:33Z" finished-at="2018-06-19T21:31:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerWithArrayObject(java.util.Map)[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="registerWithArrayObject" duration-ms="59902" started-at="2018-06-19T21:31:34Z" data-provider="RegisterUser" finished-at="2018-06-19T21:32:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=rithu@gmail.com, UserName=rithu, LName=C Jacob, Address=Jamo Cottage, Phone=3456633.0, State=Kerala, Postal_Code=601002.0, Country=INDIA, City=Paravoor, FName=Rithu, Password=pass}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithArrayObject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mercury.demo.tests.RegistrationTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="85" started-at="2018-06-19T21:32:33Z" finished-at="2018-06-19T21:32:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

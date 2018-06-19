@@ -1,11 +1,15 @@
 package com.mercury.demo.tests;
 
+import org.testng.annotations.Test;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.mercury.demo.pages.HomePage;
 import com.mercury.demo.pages.RegisterPage;
+import com.mercury.demo.utils.Readers.ExcelReader;
 
 public class RegistrationTest extends BaseTest {
 
@@ -17,7 +21,7 @@ public class RegistrationTest extends BaseTest {
 	RegisterationDetails withRegisterationDetails = new RegisterationDetails(contactInformation, mailingInformation,
 			userInformation);
 
-	@Test
+	@Test(enabled = true)
 	public void registerAUserwithHashMap() {
 		Map<String, String> withHashMap = new HashMap<String, String>();
 		withHashMap.put("FName", "Simi");
@@ -38,11 +42,27 @@ public class RegistrationTest extends BaseTest {
 		Assert.assertTrue(registerPage.pageTitle());
 	}
 
-	@Test
+	@Test(enabled = true)
 	public void registerAUser() {
 		HomePage navigate = mercuryHomePage();
 		RegisterPage registerPage = navigate.toRegisterPage();
 		registerPage.registerAccount(withRegisterationDetails);
 		Assert.assertTrue(registerPage.pageTitle());
 	}
+
+	@DataProvider(name = "RegisterUser")
+	public Object[][] registringNewUser() throws IOException {
+		final String FILENAME = "TestData.xlsx";
+		ExcelReader readExcel = new ExcelReader();
+		return readExcel.andReturn2DObject(FILENAME);
+	}
+
+	@Test(dataProvider = "RegisterUser")
+	public void registerWithArrayObject(Map<String, String> ArrayObjecthashWithMap) {
+		HomePage navigate = mercuryHomePage();
+		RegisterPage registerPage = navigate.toRegisterPage();
+		registerPage.registerAccountDetailsWith(ArrayObjecthashWithMap);
+		Assert.assertTrue(registerPage.pageTitle());
+	}
+
 }
